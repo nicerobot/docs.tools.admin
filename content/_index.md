@@ -46,14 +46,14 @@ Root flags `--log-level` (`debug`, `info`, `warn`, `error`) and `--log-format` (
 The repo root is a Docker action. Select a command with the `command` input:
 
 ```yaml
-      - uses: nicerobot/tools.admin@v3
-        with:
-          command: cleanup-runs
-          cleanup-days: "30"
-          cleanup-keep: "5"
-          cleanup-dry-run: "false"
-        env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+- uses: nicerobot/tools.admin@v3
+  with:
+    command: cleanup-runs
+    cleanup-days: "30"
+    cleanup-keep: "5"
+    cleanup-dry-run: "false"
+  env:
+    GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 ```
 
 Action inputs map onto the CLI flags per command:
